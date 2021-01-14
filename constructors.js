@@ -14,7 +14,11 @@
   The values for the make and model will come from two parameters, make and model (in that order).
 */
 
-// Code here
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model;
+
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -33,7 +37,8 @@ function Employee(name, email, hireDate) {
     Assign the result of the invocation to a variable called bob.
   */
   
-  // Code here
+  const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
+  
   
   ////////// PROBLEM 3 //////////
   
@@ -55,8 +60,11 @@ function Employee(name, email, hireDate) {
     You'll also need to use the 'this' keyword properly in order to make sure you're
       invoking moveCar on the right object (prius vs mustang).
   */
+  // function Car(){
+
+
+  // }
   
-  // Code here
   
   ////////// PROBLEM 4 //////////
   
@@ -69,21 +77,38 @@ function Employee(name, email, hireDate) {
     Change the rating property to become this new number and return the updated rating.
   */
   
-  function Movie(name, genre, rating) {
-    this.name = name;
-    this.genre = genre;
-    this.rating = rating;
-  }
+  // function Movie(name, genre, rating) {
+  //   this.name = name;
+  //   this.genre = genre;
+  //   this.rating = rating;
+  // }
   
-  // Code here
+  // Movie.prototype.changeRating = function(num){
+  //  return (this.rating + num) / 
+ 
+  // }
   
   ////////// PROBLEM 5 //////////
   
   // Write a constructor function called User. This function should take in 4 parameters called name, age, email, and savedPosts in that order. Name and email will be strings, age will be a number and savedPosts will be an array of objects. These objects will each have 3 properties: id (a number), title (a string), and rating (a number between 1 and 5). These objects are the posts that the user will have saved to their account.
   
-  // Once the User constructor function is created, write a prototype method for the User function. Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the same as described previously (id, title, rating).
+  // Once the User constructor function is created, write a prototype method for the User function.  DONE
+  //Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). DONE
+  //Use these parameters to create a new object and add it to the savedPosts array. 
+  //Make sure to name the properties the same as described previously (id, title, rating).
   
-  // Code here
+  function User(name, age, email, savedPosts){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.savedPosts = savedPosts;
+
+  }
+
+  //User.prototype.addSavedPost(id, title, rating)
+
+  const addSavedPost = new User.prototype(7, 'this is the title', 10) 
+
   
   ////////// PROBLEM 6 //////////
   
